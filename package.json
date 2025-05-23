@@ -1,0 +1,38 @@
+{
+  "name": "track-my-package",
+  "version": "1.0.0",
+  "description": "Modern package tracking website for Indonesian couriers",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000",
+    "dev": "live-server --port=3000 --watch=.",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Ready for deployment'"
+  },
+  "keywords": [
+    "package-tracking",
+    "courier",
+    "indonesia",
+    "shipping",
+    "logistics",
+    "jne",
+    "jnt",
+    "tiki",
+    "sicepat",
+    "pos"
+  ],
+  "author": "TrackMyPackage Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/track-my-package.git"
+  },
+  "homepage": "https://yourusername.github.io/track-my-package/",
+  "bugs": {
+    "url": "https://github.com/yourusername/track-my-package/issues"
+  }
+}

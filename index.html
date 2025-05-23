@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Resi Paket</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="animated-icon">
+                    <i class="fas fa-box-open"></i>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring delay-1"></div>
+                    <div class="pulse-ring delay-2"></div>
+                </div>
+                <h1 class="hero-title">
+                    <span class="typing-text">Cek Resi Paket</span>
+                    <span class="cursor">|</span>
+                </h1>
+                <p class="hero-subtitle">Lacak paket Anda dengan mudah dan cepat</p>
+            </div>
+        </section>
+
+        <!-- Tracking Section -->
+        <section class="tracking-section">
+            <div class="tracking-card">
+                <form class="tracking-form" id="trackingForm">
+                    <div class="form-group">
+                        <div class="input-container">
+                            <input type="text" id="trackingNumber" placeholder="Masukkan nomor resi..." required>
+                            <div class="input-border"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="select-container">                            <select id="courier" required>
+                                <option value="">Pilih Kurir</option>
+                                <option value="jne">JNE</option>
+                                <option value="jnt">J&T Express</option>
+                                <option value="tiki">TIKI</option>
+                                <option value="sicepat">SiCepat</option>
+                                <option value="pos">POS Indonesia</option>
+                                <option value="anteraja">AnterAja</option>
+                                <option value="ninja">Ninja Express</option>
+                                <option value="wahana">Wahana</option>
+                                <option value="spx">Shopee Express</option>
+                            </select>
+                            <div class="select-border"></div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="track-btn">
+                        <span class="btn-text">Lacak Paket</span>
+                        <div class="btn-loader"></div>
+                        <i class="fas fa-search btn-icon"></i>
+                    </button>
+                </form>
+
+                <!-- Demo Controls -->
+                <div class="demo-controls" id="demoControls">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Loading Animation -->
+            <div class="loading-container" id="loading" style="display: none;">
+                <div class="loading-animation">
+                    <div class="package-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="loading-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>Sedang melacak paket...</p>
+                </div>
+            </div>
+
+            <!-- Tracking Result -->
+            <div class="result-container" id="trackingResult" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header">
+                        <div class="package-visual">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="result-info">
+                            <h3 id="resultResi" class="resi-number"></h3>
+                            <p id="resultCourier" class="courier-name"></p>
+                        </div>                        <div class="status-indicator" id="statusBadge">
+                            <i class="status-icon"></i>
+                            <span id="statusText">Status</span>
+                            <span class="delivery-state" id="deliveryState"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-details">
+                        <div class="detail-item">
+                            <span class="label">Pengirim</span>
+                            <span class="value" id="senderInfo">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Penerima</span>
+                            <span class="value" id="receiverInfo">-</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Estimasi</span>
+                            <span class="value" id="estimatedDelivery">-</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-container">
+                        <h4>Riwayat Pengiriman</h4>
+                        <div class="timeline" id="trackingTimeline">
+                            <!-- Timeline will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-container" id="errorMessage" style="display: none;">
+                <div class="error-card">
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Paket Tidak Ditemukan</h3>
+                    <p>Nomor resi yang Anda masukkan tidak ditemukan. Pastikan nomor resi dan kurir sudah benar.</p>
+                    <button class="retry-btn" onclick="hideAllResults()">
+                        <i class="fas fa-redo"></i>
+                        Coba Lagi
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <script src="script.js"></script>
+</body>
+</html>
